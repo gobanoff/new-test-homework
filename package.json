@@ -2,5 +2,12 @@
   "dependencies": {
     "body-parser": "^1.20.2",
     "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "newman": "^6.1.2"
+  },
+  "scripts": {
+    "test": "newman run alex2-test/alex2-test.postman_collection.json -e alex2-test/workspace.postman_globals.json",
+    "test:report": "newman run alex2-test/alex2-test.postman_collection.json -r htmlextra"
   }
 }
